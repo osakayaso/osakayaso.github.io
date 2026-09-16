@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oSaKaYaSo</title>
+    <style>
+        /* 外部通信を一切せず、OS内蔵の最も美しいフォントを自動適用 */
+        body {
+            font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f9fafb; /* 通常時（ライトモード）：目に優しい極薄のグレー */
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+            
+            /* 現代の完全中央配置（ブラウザ内蔵機能のみで処理） */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            
+        }
+
+        /* 文字を囲むコンテナ */
+        .container {
+            text-align: center;
+        }
+
+        /* 「oSaKaYaSo」：デバイスの横幅に合わせて文字サイズが自動追従 */
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem); /* スマホではコンパクトに、PCでは大きく自動伸縮 */
+            font-weight: 700;
+            color: #111827; /* 通常時（ライトモード）：洗練された濃い目の黒 */
+            letter-spacing: 0.05em; /* 文字の横幅に美しい余白を持たせる */
+            margin: 0 0 8px 0; /* 下の文字との間隔をわずかに調整 */
+            line-height: 1.2;
+        }
+
+        /* 「maybe later...」：小文字の美しさを活かしたスマートな配置 */
+        p {
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            font-weight: 400; /* 文字を少し細めにして、メインタイトルとのメリハリを強調 */
+            color: #6b7280; /* 通常時（ライトモード）：やわらかいグレー */
+            margin: 0;
+            letter-spacing: 0.1em; /* あえて広げすぎず、言葉のニュアンスに合わせた自然な間隔に */
+            font-style: italic; /* 遊び心を持たせるために少し斜体に */
+        }
+
+        /* 【ダークモード設定】スマホやMacがダークモードの時に自動適用 */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #0b0f19; /* 夜間に見ても眩しくない深みのあるダークネイビー（黒） */
+            }
+            h1 {
+                color: #f3f4f6; /* ダークモード時：クリアで目に優しいオフホワイト */
+            }
+            p {
+                color: #9ca3af; /* ダークモード時：明るめの明るいグレー */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>oSaKaYaSo</h1>
+        <p>maybe later...</p>
+    </div>
+
+</body>
+</html>
